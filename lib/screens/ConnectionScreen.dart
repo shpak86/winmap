@@ -65,7 +65,7 @@ class ConnectionScreenState extends State<ConnectionScreen> {
             Icons.wifi,
             tag: "connection",
           ),
-          title: Text("Соединение"),
+          title: Text("Connection"),
         ),
         body: showBody());
   }

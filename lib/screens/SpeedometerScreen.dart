@@ -69,7 +69,7 @@ class SpeedometerScreenState extends State<SpeedometerScreen> {
           Icons.network_check,
           tag: "speedometer",
         ),
-        title: Text("Тест скорости"),
+        title: Text("Speed test"),
       ),
       body: _showContent(),
       floatingActionButton: _showFloatingActionButton(),

@@ -30,7 +30,7 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Фильтр списка"),
+        title: Text("Filter"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.delete),
@@ -66,25 +66,25 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
 
   NetworksSortOrder stringToOrder(String string) {
     NetworksSortOrder result;
-    if (string == "Без сортировки") result = NetworksSortOrder.none;
-    if (string == "BSSID по возрастанию") result = NetworksSortOrder.bssidAsc;
-    if (string == "BSSID по убыванию") result = NetworksSortOrder.bssidDesc;
-    if (string == "SSID по возрастанию") result = NetworksSortOrder.ssidAsc;
-    if (string == "SSID по убыванию") result = NetworksSortOrder.ssidDesc;
-    if (string == "Сигнал по возрастанию") result = NetworksSortOrder.signalAsc;
-    if (string == "Сигнал по убыванию") result = NetworksSortOrder.signalDesc;
+    if (string == "None") result = NetworksSortOrder.none;
+    if (string == "BSSID ascending") result = NetworksSortOrder.bssidAsc;
+    if (string == "BSSID descending") result = NetworksSortOrder.bssidDesc;
+    if (string == "SSID ascending") result = NetworksSortOrder.ssidAsc;
+    if (string == "SSID descending") result = NetworksSortOrder.ssidDesc;
+    if (string == "Сигнал ascending") result = NetworksSortOrder.signalAsc;
+    if (string == "Сигнал descending") result = NetworksSortOrder.signalDesc;
     return result;
   }
 
   String orderToString(NetworksSortOrder order) {
     String result = "";
-    if (order == NetworksSortOrder.none) result = "Без сортировки";
-    if (order == NetworksSortOrder.bssidAsc) result = "BSSID по возрастанию";
-    if (order == NetworksSortOrder.bssidDesc) result = "BSSID по убыванию";
-    if (order == NetworksSortOrder.ssidAsc) result = "SSID по возрастанию";
-    if (order == NetworksSortOrder.ssidDesc) result = "SSID по убыванию";
-    if (order == NetworksSortOrder.signalAsc) result = "Сигнал по возрастанию";
-    if (order == NetworksSortOrder.signalDesc) result = "Сигнал по убыванию";
+    if (order == NetworksSortOrder.none) result = "None";
+    if (order == NetworksSortOrder.bssidAsc) result = "BSSID ascending";
+    if (order == NetworksSortOrder.bssidDesc) result = "BSSID descending";
+    if (order == NetworksSortOrder.ssidAsc) result = "SSID ascending";
+    if (order == NetworksSortOrder.ssidDesc) result = "SSID descending";
+    if (order == NetworksSortOrder.signalAsc) result = "Сигнал ascending";
+    if (order == NetworksSortOrder.signalDesc) result = "Сигнал descending";
     return result;
   }
 
@@ -95,7 +95,7 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Порядок сортировки сетей",
+            "Networks sort order",
             style: Theme.of(context).textTheme.caption,
           ),
           Row(
@@ -109,13 +109,13 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
                     });
                   },
                   items: <String>[
-                    "Без сортировки",
-                    "BSSID по возрастанию",
-                    "BSSID по убыванию",
-                    "SSID по возрастанию",
-                    "SSID по убыванию",
-                    "Сигнал по возрастанию",
-                    "Сигнал по убыванию",
+                    "None",
+                    "BSSID ascending",
+                    "BSSID descending",
+                    "SSID ascending",
+                    "SSID descending",
+                    "Сигнал ascending",
+                    "Сигнал descending",
                   ].map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,
@@ -171,17 +171,17 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
 
   NetworkFrequency stringToFrequency(String string) {
     NetworkFrequency frequency;
-    if (string == "Все сети") frequency = NetworkFrequency.all;
-    if (string == "Сети 5 GHz") frequency = NetworkFrequency.mhz5000;
-    if (string == "Сети 2.4 GHz") frequency = NetworkFrequency.mhz2400;
+    if (string == "All") frequency = NetworkFrequency.all;
+    if (string == "5 GHz networks") frequency = NetworkFrequency.mhz5000;
+    if (string == "2.4 GHz networks") frequency = NetworkFrequency.mhz2400;
     return frequency;
   }
 
   String frequencyToString(NetworkFrequency frequency) {
     String result;
-    if (frequency == NetworkFrequency.all) result = "Все сети";
-    if (frequency == NetworkFrequency.mhz5000) result = "Сети 5 GHz";
-    if (frequency == NetworkFrequency.mhz2400) result = "Сети 2.4 GHz";
+    if (frequency == NetworkFrequency.all) result = "All";
+    if (frequency == NetworkFrequency.mhz5000) result = "5 GHz networks";
+    if (frequency == NetworkFrequency.mhz2400) result = "2.4 GHz networks";
     return result;
   }
 
@@ -192,7 +192,7 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Частоты",
+            "Frequency",
             style: Theme.of(context).textTheme.caption,
           ),
           Row(
@@ -206,9 +206,9 @@ class NetworksSettingsScreenState extends State<NetworksDisplayPropertiesScreen>
                     });
                   },
                   items: <String>[
-                    "Все сети",
-                    "Сети 5 GHz",
-                    "Сети 2.4 GHz",
+                    "All",
+                    "5 GHz networks",
+                    "2.4 GHz networks",
                   ].map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,

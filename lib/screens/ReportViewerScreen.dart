@@ -32,7 +32,7 @@ class ReportViewerScreenState extends State<ReportViewerScreen> {
         children: <Widget>[
           Center(
             child: Text(
-              "Соединение",
+              "Connection",
               style: TextStyle(fontSize: 24),
             ),
           ),
@@ -52,7 +52,7 @@ class ReportViewerScreenState extends State<ReportViewerScreen> {
         children: <Widget>[
           Center(
             child: Text(
-              "Устройство",
+              "Device",
               style: TextStyle(fontSize: 24),
             ),
           ),
@@ -98,7 +98,7 @@ class ReportViewerScreenState extends State<ReportViewerScreen> {
         children: <Widget>[
           Center(
             child: Text(
-              "Android",
+              "Networks",
               style: TextStyle(fontSize: 24),
             ),
           ),
@@ -135,7 +135,7 @@ class ReportViewerScreenState extends State<ReportViewerScreen> {
                   child: TextField(
                     controller: reportEditController,
                     decoration: InputDecoration(
-                      labelText: "Номер отчета",
+                      labelText: "Report number",
                     ),
                   ),
                 ),
@@ -176,7 +176,7 @@ class ReportViewerScreenState extends State<ReportViewerScreen> {
           Icons.assignment_returned,
           tag: "report_viewer",
         ),
-        title: Text("Просмотр отчета"),
+        title: Text("View report"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.delete),

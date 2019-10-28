@@ -39,7 +39,7 @@ class AndroidInformationScreen extends StatelessWidget {
           Icons.android,
           tag: "android_information",
         ),
-        title: Text("Информация Android"),
+        title: Text("Android"),
       ),
       body: showBody(),
     );

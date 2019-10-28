@@ -64,7 +64,7 @@ class NetworksScreenState extends State<NetworksScreen> {
           Icons.leak_add,
           tag: "networks",
         ),
-        title: Text("Wi-Fi сети"),
+        title: Text("Wi-Fi networks"),
         actions: <Widget>[
           IconButton(
             icon: Icon(

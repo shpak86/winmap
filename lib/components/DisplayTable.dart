@@ -19,8 +19,8 @@ class DisplayTable extends StatelessWidget {
             Expanded(
               child: DataTable(
                 columns: [
-                  DataColumn(label: Text("Параметр")),
-                  DataColumn(label: Text("Значение"))
+                  DataColumn(label: Text("Parameter")),
+                  DataColumn(label: Text("Value"))
                 ],
                 rows: _labels.keys
                     .map((label) => DataRow(cells: [

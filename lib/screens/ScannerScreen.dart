@@ -145,7 +145,7 @@ class ScannerScreenState extends State<ScannerScreen> {
           Icons.import_export,
           tag: "scanner",
         ),
-        title: Text("TCP сканер"),
+        title: Text("TCP scanner"),
       ),
       body: showContent(),
       floatingActionButton: showFloatingActionButton(),

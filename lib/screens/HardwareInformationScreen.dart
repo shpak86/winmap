@@ -36,7 +36,7 @@ class HardwareInformationScreen extends StatelessWidget {
           Icons.perm_device_information,
           tag: "hardware_information",
         ),
-        title: Text("Устройство"),
+        title: Text("Device"),
       ),
       body: showBody(),
     );

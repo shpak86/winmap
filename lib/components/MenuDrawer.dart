@@ -15,7 +15,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.perm_device_information),
-            title: Text("Устройство"),
+            title: Text("Device"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/device");
@@ -23,7 +23,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.leak_add),
-            title: Text("Соединение"),
+            title: Text("Connection"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/connection");
@@ -31,7 +31,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.wifi),
-            title: Text("Wi-Fi сети"),
+            title: Text("Wi-Fi networks"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/networks");
@@ -39,7 +39,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.build),
-            title: Text("Инструменты"),
+            title: Text("Tools"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/tools");
@@ -47,7 +47,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.assignment),
-            title: Text("Отправить отчет"),
+            title: Text("Send report"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/report");
@@ -55,7 +55,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.assignment),
-            title: Text("Просмотреть отчет"),
+            title: Text("View report"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/report_viewer");
@@ -63,7 +63,7 @@ class MenuDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.settings),
-            title: Text("Настройки"),
+            title: Text("Settings"),
             onTap: () {
               Navigator.pop(context);
               Navigator.pushNamed(context, "/configuration");

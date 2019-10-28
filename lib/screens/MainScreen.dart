@@ -15,7 +15,7 @@ class MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Хакатул"),
+        title: Text("Winmap"),
       ),
 //      drawer: MenuDrawer(),
       body: TileGrid(),

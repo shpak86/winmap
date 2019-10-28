@@ -77,11 +77,11 @@ class ReportScreenState extends State<ReportScreen> {
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Отчет отправлен"),
+          title: Text("Report sent"),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text("Номер отправленного отчета: " + (response != null ? response["id"] : "unknown")),
+                Text("Report number: " + (response != null ? response["id"] : "unknown")),
               ],
             ),
           ),
@@ -106,7 +106,7 @@ class ReportScreenState extends State<ReportScreen> {
           Icons.assignment_turned_in,
           tag: "report",
         ),
-        title: Text("Отправить отчет"),
+        title: Text("Send report"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -115,7 +115,7 @@ class ReportScreenState extends State<ReportScreen> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: Text("Информация об устройстве"),
+                  child: Text("Device informaton"),
                   flex: 3,
                 ),
                 Expanded(
@@ -135,7 +135,7 @@ class ReportScreenState extends State<ReportScreen> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: Text("Параметры подключения"),
+                  child: Text("Connection"),
                   flex: 3,
                 ),
                 Expanded(
@@ -155,7 +155,7 @@ class ReportScreenState extends State<ReportScreen> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: Text("Список доступных сетей"),
+                  child: Text("Networks"),
                   flex: 3,
                 ),
                 Expanded(
@@ -175,7 +175,7 @@ class ReportScreenState extends State<ReportScreen> {
             Row(
               children: <Widget>[
                 Expanded(
-                  child: Text("Отчеты тестирования"),
+                  child: Text("Tests"),
                   flex: 3,
                 ),
                 Expanded(
@@ -198,7 +198,7 @@ class ReportScreenState extends State<ReportScreen> {
                 textAlignVertical: TextAlignVertical.top,
                 maxLines: null,
                 decoration: InputDecoration(
-                  labelText: "Комментарий",
+                  labelText: "Comment",
                   alignLabelWithHint: true,
                 ),
                 controller: _commentTextFieldController,

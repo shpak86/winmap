@@ -112,7 +112,7 @@ class NetworkCardState extends State<NetworkCard> {
     final scaffold = Scaffold.of(context);
     scaffold.showSnackBar(
       SnackBar(
-        content: const Text('Скопировано в буфер обмена'),
+        content: const Text('Copied to clipboard'),
         action: SnackBarAction(label: 'OK', onPressed: scaffold.hideCurrentSnackBar),
       ),
     );

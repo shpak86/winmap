@@ -55,7 +55,7 @@ class TileGridState extends State<TileGrid> {
       crossAxisCount: 3,
       children: <Widget>[
         ScreenTile(
-          label: "Устройство",
+          label: "Device",
           icon: Icons.perm_device_information,
           route: "/hardware_information",
           tag: "hardware_information",
@@ -67,13 +67,13 @@ class TileGridState extends State<TileGrid> {
           tag: "android_information",
         ),
         ScreenTile(
-          label: "Соединение",
+          label: "Connection",
           icon: Icons.wifi,
           route: "/connection",
           tag: "connection",
         ),
         ScreenTile(
-          label: "Сети",
+          label: "Networks",
           icon: Icons.leak_add,
           route: "/networks",
           tag: "networks",
@@ -86,27 +86,27 @@ class TileGridState extends State<TileGrid> {
           tag: "scanner",
         ),
         ScreenTile(
-          label: "Скорость",
+          label: "Speed",
           icon: Icons.network_check,
           route: "/speedometer",
           tag: "speedometer",
         ),
 
         ScreenTile(
-          label: "Отчет",
+          label: "Report",
           icon: Icons.assignment_turned_in,
           route: "/report",
           tag: "report",
           color: AuthorizationProvider.authorized == true ? Colors.white10 : Colors.red[400],
         ),
         ScreenTile(
-          label: "Загрузка",
+          label: "View",
           icon: Icons.assignment_returned,
           route: "/report_viewer",
           tag: "report_viewer",
         ),
         ScreenTile(
-          label: "Настройки",
+          label: "Settings",
           icon: Icons.settings,
           route: "/configuration",
           tag: "configuration",

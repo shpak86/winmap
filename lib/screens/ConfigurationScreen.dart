@@ -42,7 +42,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen> {
             TextField(
               obscureText: true,
               decoration: InputDecoration(
-                labelText: "Пароль",
+                labelText: "Password",
               ),
               controller: _passwordController,
             ),
@@ -52,7 +52,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 16.0),
                     child: RaisedButton(
-                        child: Text("Вход"),
+                        child: Text("Login"),
                         onPressed: _loginButtonDisabled
                             ? null
                             : () {
@@ -71,7 +71,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen> {
                                     Scaffold.of(context).showSnackBar(
                                       SnackBar(
                                         backgroundColor: Colors.redAccent[100],
-                                        content: const Text('Неправильный email или пароль'),
+                                        content: const Text('Wrong email or password'),
                                         action: SnackBarAction(
                                           label: 'OK',
                                           onPressed: Scaffold.of(context).hideCurrentSnackBar,
@@ -115,7 +115,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen> {
                     padding: const EdgeInsets.only(top: 16.0),
                     child: RaisedButton(
                         color: Colors.red,
-                        child: Text("Выход"),
+                        child: Text("Logout"),
                         onPressed: () {
                           AuthorizationProvider.exit();
                           setState(() {
@@ -141,7 +141,7 @@ class ConfigurationScreenState extends State<ConfigurationScreen> {
           Icons.settings,
           tag: "configuration",
         ),
-        title: Text("Настройки"),
+        title: Text("Settings"),
       ),
       body: Builder(
         builder: (BuildContext context) {
